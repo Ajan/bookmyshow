@@ -48,4 +48,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgments
 
-- This script was developed based on an initial version by [Aakarsh B](https://github.com/Aakarsh-B).
+- This script was developed based on an initial version by [Aakarsh Gopi](https://github.com/aakarshg).
