@@ -10,7 +10,7 @@ This script checks the availability of movie tickets on BookMyShow website and s
 
 ## Installation
 
-1. Clone the repository or download the script file `ticket_availability_checker.py` directly.
+1. Clone the repository or download the script file `bms.py` directly.
 
 2. Install the required dependencies by running the following command:
 
