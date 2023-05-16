@@ -25,22 +25,31 @@ Before running the script, you need to configure the following parameters in the
 - `date`: Replace with the desired date in the format `YYYYMMDD`.
 - `venue`: Replace with the venue code of the desired theater (can be found by inspecting the element data-id for the venue).
 - `show`: Replace with the preferred show timing.
-- `delay`: Time gap in seconds between two script runs.
+- `delay`: The time gap in seconds between two script runs. Adjust this value to change the frequency of checking ticket availability.
 - `TO`: Email address to which you want to receive the availability notification.
 - `GMAIL_USER` and `GMAIL_PASS`: Your Gmail credentials. Ensure that you have allowed access for "less secure apps" in your Gmail account settings.
+- Customize the email `SUBJECT` and `TEXT` to fit your notification message.
+
 
 ## Usage
 
-Run the script using the following command:
+1. Clone the repository or download the script file.
+2. Install the required dependencies mentioned in the Prerequisites section.
 
-- python ticket_availability_checker.py
+Save the script file, and run the script using the following command:
 
+- python bms.py
 
 The script will check the availability of tickets in the specified interval (defined by `delay`). If tickets are available, it will send an email notification to the configured email address.
 
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvement, please feel free to open an issue or submit a pull request.
+
+## Important Notes
+
+- Make sure to use a Gmail account for the `GMAIL_USER` and `GMAIL_PASS` variables.
+- If you have two-factor authentication (MFA) enabled for your Gmail account, you may need to generate an app password and use it instead of your account password.
 
 ## License
 
