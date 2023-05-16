@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 
-import time
-import re
-import smtplib
 import requests
 from bs4 import BeautifulSoup
+import re
+import smtplib
+import ssl
+import time
 
 site = "https://in.bookmyshow.com/buytickets/x-men-apocalypse-3d-hyderabad/movie-hyd-ET00029820-MT/"  # Replace this with your movie and city URL
 date = "20160525"  # Replace the date with the date for which you'd like to book tickets! Format: YYYYMMDD
@@ -15,11 +16,11 @@ delay = 300  # Time gap in seconds between 2 script runs
 
 TO = 'test@gmail.com'  # Mail ID to which you want to get the alerts to
 GMAIL_USER = 'sample_username@gmail.com'
-GMAIL_PASS = 'sample_password'
+GMAIL_PASS = 'sample_password' # Don't forget to disable MFA, if you're using MFA. The code doesn't support google-auth
 SUBJECT = 'Tickets are now available, Book fast'
 TEXT = f'The tickets are now available for the {show} show at the venue {venue}'
 
-def send_email():
+def send_email(): # Sends an email using the provided Gmail account credentials.
     print("Sending Email")
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtpserver:
         smtpserver.login(GMAIL_USER, GMAIL_PASS)
